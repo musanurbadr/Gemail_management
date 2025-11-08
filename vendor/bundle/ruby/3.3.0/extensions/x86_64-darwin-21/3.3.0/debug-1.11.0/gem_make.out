@@ -1,0 +1,20 @@
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+/Users/musa/.asdf/installs/ruby/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-d3x7u4 sitelibdir\=./.gem.20251101-51480-d3x7u4 clean
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-d3x7u4 sitelibdir\=./.gem.20251101-51480-d3x7u4
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-d3x7u4 sitelibdir\=./.gem.20251101-51480-d3x7u4 install
+/usr/local/bin/ginstall -c -m 0755 debug.bundle ./.gem.20251101-51480-d3x7u4/debug
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/debug-1.11.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-d3x7u4 sitelibdir\=./.gem.20251101-51480-d3x7u4 clean

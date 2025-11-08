@@ -1,0 +1,23 @@
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+/Users/musa/.asdf/installs/ruby/3.3.5/bin/ruby extconf.rb
+checking for fdatasync() in unistd.h... yes
+checking for whether -D_GNU_SOURCE is accepted as CPPFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=c99 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-67idw8 sitelibdir\=./.gem.20251101-51480-67idw8 clean
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-67idw8 sitelibdir\=./.gem.20251101-51480-67idw8
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-67idw8 sitelibdir\=./.gem.20251101-51480-67idw8 install
+/usr/local/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20251101-51480-67idw8/bootsnap
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/bootsnap-1.18.6/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-67idw8 sitelibdir\=./.gem.20251101-51480-67idw8 clean

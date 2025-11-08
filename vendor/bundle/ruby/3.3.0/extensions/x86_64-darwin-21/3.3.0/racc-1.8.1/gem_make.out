@@ -1,0 +1,19 @@
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+/Users/musa/.asdf/installs/ruby/3.3.5/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-hww2a9 sitelibdir\=./.gem.20251101-51480-hww2a9 clean
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-hww2a9 sitelibdir\=./.gem.20251101-51480-hww2a9
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-hww2a9 sitelibdir\=./.gem.20251101-51480-hww2a9 install
+/usr/local/bin/ginstall -c -m 0755 cparse.bundle ./.gem.20251101-51480-hww2a9/racc
+
+current directory: /Users/musa/Gmail-management/vendor/bundle/ruby/3.3.0/gems/racc-1.8.1/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20251101-51480-hww2a9 sitelibdir\=./.gem.20251101-51480-hww2a9 clean
