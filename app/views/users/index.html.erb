@@ -1,0 +1,13 @@
+<% @users.each do |user| %>
+  <strong>email:</strong>
+  <%= user.email %>
+  <br>
+  
+  <strong>current_sign_in_ip:</strong>
+  <%= user.current_sign_in_ip %>
+  <br>
+  
+  <strong>confirmed?</strong>
+  <%= user.confirmed? %>
+  <br>
+  <hr> <% end %>
