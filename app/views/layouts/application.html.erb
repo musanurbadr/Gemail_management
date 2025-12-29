@@ -22,18 +22,24 @@
     <%= javascript_importmap_tags %>
     </head>
     <body>
-      <% if user_signed_in? %>
-        <%= current_user.email %>
-        <%= button_to 'Log out', destroy_user_session_path, method: :delete %>
-        <%= link_to '', edit_user_registration_path %>
-      <% else %>d
-        <%= link_to 'Log in', new_user_session_path %>
-        <%= link_to 'Sign up', new_user_registration_path %>
-      <% end %>
-      
-      <hr>
       <%= yield %>
-      
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    
+    <nav>
+      <% if admin_signed_in? %>
+        <strong style="color: red;">YÖNETİCİ PANELİ: <%= current_admin.email %></strong>
+        <%= button_to 'Admin Çıkış', destroy_admin_session_path, method: :delete %>
+      <% elsif user_signed_in? %>
+        <strong>Kullanıcı: <%= current_user.email %></strong>
+        <%= button_to 'Kullanıcı Çıkış', destroy_user_session_path, method: :delete %>
+      <% else %>
+        <%= link_to 'Kullanıcı Girişi', new_user_session_path %> |
+        <%= link_to 'Admin Girişi', new_admin_session_path %>
+      <% end %>
+    </nav>
+          
+      <hr>
     </body>
 </html>
 

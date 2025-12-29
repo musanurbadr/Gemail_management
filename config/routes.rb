@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins
   # 1. Ana Sayfa (Site açılınca görünen yer)
   root "dashboard#index"
   

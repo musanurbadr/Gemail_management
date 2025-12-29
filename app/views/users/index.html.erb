@@ -1,6 +1,7 @@
 <% @users.each do |user| %>
   <strong>email:</strong>
   <%= user.email %>
+  # <%= user.roles.pluck(:name) %>
   <br>
   
   <strong>current_sign_in_ip:</strong>
