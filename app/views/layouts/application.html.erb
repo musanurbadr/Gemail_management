@@ -20,26 +20,27 @@
     <%# Includes all stylesheet files in app/assets/stylesheets %>
     <%= stylesheet_link_tag :app, "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
-    </head>
+  </head>
     <body>
       <%= yield %>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-    
+    <% flash.each do |type, message| %>
+      <div class="flash <%= type %>">
+        <%= message %>
+      </div>
+    <% end %>
     <nav>
       <% if admin_signed_in? %>
         <strong style="color: red;">YÖNETİCİ PANELİ: <%= current_admin.email %></strong>
-        <%= button_to 'Admin Çıkış', destroy_admin_session_path, method: :delete %>
+        <%= button_to 'Admin Выход', destroy_admin_session_path, method: :delete %>
       <% elsif user_signed_in? %>
-        <strong>Kullanıcı: <%= current_user.email %></strong>
-        <%= button_to 'Kullanıcı Çıkış', destroy_user_session_path, method: :delete %>
+        <strong>user: <%= current_user.email %></strong>
+        <%= button_to 'Выход пользователя ', destroy_user_session_path, method: :delete %>
       <% else %>
-        <%= link_to 'Kullanıcı Girişi', new_user_session_path %> |
-        <%= link_to 'Admin Girişi', new_admin_session_path %>
+        <%= link_to 'Вход пользователя', new_user_session_path %> 
+        <%= link_to 'Admin Вход', new_admin_session_path %>
       <% end %>
     </nav>
-          
-      <hr>
+    <hr>
     </body>
 </html>
 
