@@ -21,7 +21,10 @@ Rails.application.configure do
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"
 
-  # Store uploaded files on the local file system (see config/storage.yml for options).
+  # --- ÖNEMLİ NOT (RESİM YÜKLEME) ---
+  # Render ücretsiz planda dosyalar kalıcı değildir. Uygulama yeniden başlatıldığında
+  # (deploy edildiğinde) yüklenen resimler silinir. Hocaya göstermek için bu ayar yeterlidir
+  # ama kalıcı resimler için Amazon S3 gibi servisler gerekir.
   config.active_storage.service = :local
 
   # Assume all access to the app is happening through a SSL-terminating reverse proxy.
@@ -51,14 +54,22 @@ Rails.application.configure do
 
   # Replace the default in-process and non-durable queuing backend for Active Job.
   config.active_job.queue_adapter = :solid_queue
-  config.solid_queue.connects_to = { database: { writing: :queue } }
+  
+  # --- DEĞİŞİKLİK 1: SOLID QUEUE AYARI ---
+  # Varsayılan olarak Rails 8, kuyruk işlemleri için ayrı bir veritabanı arar.
+  # Render'da tek veritabanı kullandığımız için aşağıdaki satırı YORUMA ALIYORUZ (#).
+  # Böylece ana veritabanını kullanır ve hata vermez.
+  # config.solid_queue.connects_to = { database: { writing: :queue } }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
   # Set host to be used by links generated in mailer templates.
-  config.action_mailer.default_url_options = { host: "example.com" }
+  # --- DEĞİŞİKLİK 2: MAILER HOST ---
+  # Render'daki site ismini otomatik alması için burayı güncelledik.
+  # Şifre sıfırlama vb. linklerin doğru çalışması için gereklidir.
+  config.action_mailer.default_url_options = { host: ENV.fetch("RENDER_EXTERNAL_HOSTNAME", "render.com") }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via rails credentials:edit.
   # config.action_mailer.smtp_settings = {
